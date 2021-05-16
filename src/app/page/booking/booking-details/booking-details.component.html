@@ -1,0 +1,41 @@
+<h2>Booking Details</h2>
+
+<hr/>
+<div *ngIf="booking">
+  <div>
+    <label><b>ID: </b></label> {{booking.id}}
+  </div>
+  <div>
+    <label><b>Passenger Name: </b></label> {{booking.passengerName}}
+  </div>
+  <div>
+    <label><b>Passenger Contact Number: </b></label> {{booking.passengerContactNumber}}
+  </div>
+  <div>
+    <label><b>Pickup Time: </b></label> {{booking.pickupTime}}
+  </div>
+  <div>
+    <label><b>ASAP: </b></label> {{booking.asap}}
+  </div>
+  <div>
+    <label><b>waitingTime: </b></label> {{booking.waitingTime}}
+  </div>
+  <div>
+    <label><b>numberOfPassengers: </b></label> {{booking.numberOfPassengers}}
+  </div>
+  <div>
+    <label><b>price: </b></label> {{booking.price}}
+  </div>
+  <div>
+    <label><b>rating: </b></label> {{booking.rating}}
+  </div>
+  <div>
+    <label><b>createdOn: </b></label> {{booking.createdOn}}
+  </div>
+  <div>
+    <label><b>lastModifiedOn: </b></label> {{booking.lastModifiedOn}}
+  </div>
+</div>
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Booking List</button><br>

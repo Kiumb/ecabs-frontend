@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+        <a routerLink="employees" class="nav-link" routerLinkActive="active">Employee List</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="add" class="nav-link" routerLinkActive="active">Add Employee</a>
+    </li>
+    <li class="nav-item">
+        <a routerLink="addbooking" class="nav-link" routerLinkActive="active">Add Booking</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="bookings" class="nav-link" routerLinkActive="active">Bookings List</a>
+  </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <br>
+  <h2 style="text-align: center;">{{title}}</h2>
+  <hr>
+  <div class="card">
+    <div class="card-body">
+    <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+      <span>eCabs Spring - angular Crud</span>
+  </div>
+</footer>

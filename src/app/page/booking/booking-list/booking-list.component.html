@@ -1,0 +1,43 @@
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h2>Bookings List</h2>
+  </div>
+  <div class="panel-body">
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Passenger Name</th>
+          <th>Passenger Contact N°</th>
+          <th>PickupTime</th>
+          <th>ASAP</th>
+          <th>waitingTime</th>
+          <th>N° Of Passengers</th>
+          <th>price</th>
+          <th>rating</th>
+          <th>createdOn</th>
+          <th>lastModifiedOn</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings | async">
+          <td>{{booking.id}}</td>
+          <td>{{booking.passengerName}}</td>
+          <td>{{booking.passengerContactNumber}}</td>
+          <td>{{booking.pickupTime}}</td>
+          <td>{{booking.asap}}</td>
+          <td>{{booking.waitingTime}}</td>
+          <td>{{booking.numberOfPassengers}}</td>
+          <td>{{booking.price}}</td>
+          <td>{{booking.rating}}</td>
+          <td>{{booking.createdOn}}</td>
+          <td>{{booking.lastModifiedOn}}</td>
+          <td><button (click)="deleteBooking(booking.id)" class="btn btn-danger">Delete</button>
+              <button (click)="bookingUpdate(booking.id)" class="btn btn-info" style="margin-left: 10px">Update</button>
+              <button (click)="bookingDetails(booking.id)" class="btn btn-success" style="margin-left: 10px">Details</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
